@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 
 public class LoginPage  extends TestBase {
@@ -39,17 +41,23 @@ public class LoginPage  extends TestBase {
 
     }
 
-    public  void Login(String emailId,String password) throws InterruptedException {
+    public  void Login(String emailId,String password) throws InterruptedException, AWTException {
         this.emailId.sendKeys(emailId);
         this.password.sendKeys(password);
         this.loginBtn.click();
         Thread.sleep(15000);
+        Robot robot = new Robot();
+        robot.keyPress(KeyEvent.VK_TAB);
+        robot.keyPress(KeyEvent.VK_ENTER);
 
     }
 
-    public  void multipleUserLogin(String emailId,String password) {
+    public  void multipleUserLogin(String emailId,String password) throws AWTException {
         this.emailId.sendKeys(emailId);
         this.password.sendKeys(password);
         this.loginBtn.click();
+        Robot robot = new Robot();
+        robot.keyPress(KeyEvent.VK_TAB);
+        robot.keyPress(KeyEvent.VK_ENTER);
     }
 }

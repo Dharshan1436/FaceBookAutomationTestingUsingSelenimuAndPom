@@ -6,6 +6,7 @@ import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+import java.awt.*;
 import java.io.IOException;
 //@Listeners(com.fb.qa.testcases.listner.FaceBookListners.class)
 public class HomePageTest extends TestBase {
@@ -17,7 +18,7 @@ public class HomePageTest extends TestBase {
 
 
     @BeforeMethod
-    public void setUp() throws IOException, InterruptedException {
+    public void setUp() throws IOException, InterruptedException, AWTException {
         initialization();
         log.info("Test stated ....................");
         homePage = new HomePage();

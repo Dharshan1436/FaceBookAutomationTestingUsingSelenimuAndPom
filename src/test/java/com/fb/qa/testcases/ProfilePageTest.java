@@ -5,6 +5,8 @@ import com.fb.qa.pages.ProfileUpdatePage;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.*;
+
+import java.awt.*;
 import java.io.IOException;
 
 //@Listeners(com.fb.qa.testcases.listner.FaceBookListners.class)
@@ -14,7 +16,7 @@ public class ProfilePageTest extends TestBase {
     }
 
     @BeforeMethod
-    public void setUp() throws IOException, InterruptedException {
+    public void setUp() throws IOException, InterruptedException, AWTException {
         initialization();
         log.info("Test stated ....................");
         profileUpdatePage = new ProfileUpdatePage();

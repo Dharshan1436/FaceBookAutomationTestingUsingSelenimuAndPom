@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import java.awt.*;
 import java.io.IOException;
 //@Listeners(com.fb.qa.testcases.listner.FaceBookListners.class)
 public class FriendsPageTest extends TestBase {
@@ -16,7 +17,7 @@ public class FriendsPageTest extends TestBase {
     }
 FriendsPage friendsPage;
     @BeforeClass
-    public void setUp() throws IOException, InterruptedException {
+    public void setUp() throws IOException, InterruptedException, AWTException {
         initialization();
         log.info("Test stated ....................");
         friendsPage = new FriendsPage();

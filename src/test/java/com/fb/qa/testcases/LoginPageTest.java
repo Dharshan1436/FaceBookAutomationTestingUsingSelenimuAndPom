@@ -7,6 +7,7 @@ import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+import java.awt.*;
 import java.io.IOException;
 
 //@Listeners(com.fb.qa.testcases.listner.FaceBookListners.class)
@@ -52,7 +53,7 @@ public void fbLogoImageTest(){
    @Description("User Login the Application ")
    @Feature("Login: 1")
    @Story("The User enter the valid name and password then login the Application")
-   public  void loginTest() throws InterruptedException {
+   public  void loginTest() throws InterruptedException, AWTException {
         log.info("Login Test Method Running .......");
       loginPage.Login(prop.getProperty("emailId"),prop.getProperty("password"));
    }
@@ -66,7 +67,7 @@ public void fbLogoImageTest(){
 @Description("User Login the Application with multiple users ")
 @Feature("Login: 1")
 @Story("The User enter the valid name and password then login the Application")
-   public void multipleUserLoginTest(String emailId,String password){
+   public void multipleUserLoginTest(String emailId,String password) throws AWTException {
     log.info(" multipleUserLogin Test Method Running .......");
         loginPage.multipleUserLogin(emailId,password);
     try {
